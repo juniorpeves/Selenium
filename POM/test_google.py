@@ -1,6 +1,7 @@
 import unittest
 from selenium import webdriver
 from google_page import Google
+from time import sleep
 
 class GoogleTest(unittest.TestCase):
 
@@ -10,10 +11,11 @@ class GoogleTest(unittest.TestCase):
 
     def test_search(self):
         google = Google(self.driver)
-        google.open()
-        google.search('Python')
+        google.open()               #Llamada a el metodo open de la clase google
+        google.search('Python')     #Llamada a el metodo search de la clase google 
 
-        self.assertEqual('Python', google.keyword)
+        self.assertEqual('Python', google.keyword) #Validando los valores del input y search
+        sleep(3)
 
     @classmethod
     def tearDownClass(cls):

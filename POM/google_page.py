@@ -27,9 +27,9 @@ class Google(object):
         input_field.send_keys(keyword)
 
     def click_submit(self):
-        button_submit = self._driver.find_element_by_xpath('/html/body/div[1]/div[3]/form/div[2]/div[1]/div[1]/div/div[1]/div/span/svg')
+        button_submit = self._driver.find_element_by_xpath('/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]')
         button_submit.click()
 
     def search(self, keyword):
         self.type_search(keyword)
-        self.click_submit
+        self.click_submit()
